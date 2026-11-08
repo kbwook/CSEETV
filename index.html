@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSEETV 사용자 가이드 — 다운로드 · 설치 · 사용 방법 | Powered by KH2C</title>
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --panel: #151c28;
+      --border: #253045;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #3b82f6;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --code-bg: #080b11;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 48px 24px;
+      text-align: center;
+    }
+
+    .badge-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .pill {
+      background: rgba(59, 130, 246, 0.16);
+      border: 1px solid rgba(59, 130, 246, 0.45);
+      color: #93c5fd;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 10px; }
+    .subtitle { color: var(--muted); max-width: 720px; margin: 0 auto 24px; font-size: 1.02rem; }
+
+    .cta-group {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      background: #1f293d;
+      color: var(--text);
+      border: 1px solid #334155;
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      color: #93c5fd;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin: 20px 0 8px;
+      color: #f8fafc;
+    }
+
+    p, li { color: #cbd5e1; font-size: 0.95rem; }
+    ul, ol { padding-left: 22px; display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+
+    code {
+      background: rgba(255,255,255,0.08);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+      font-size: 0.86rem;
+      color: #93c5fd;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 12px 14px;
+      text-align: left;
+    }
+
+    th { background: #0f1520; color: #93c5fd; }
+
+    .tip-box {
+      background: rgba(16, 185, 129, 0.1);
+      border-left: 4px solid var(--success);
+      padding: 14px 18px;
+      border-radius: 8px;
+      margin: 14px 0;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--panel);
+      padding: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge-row">
+      <span class="pill">CSEETV</span>
+      <span class="pill">Powered by KH2C</span>
+    </div>
+    <h1>📱 CSEETV 설치 및 사용 가이드</h1>
+    <p class="subtitle">
+      안드로이드 스마트폰을 실시간 웹 CCTV 및 자동 순환 녹화 블랙박스로 활용하는 설치 방법과 기능별 사용 설명서입니다.
+    </p>
+    <div class="cta-group">
+      <a class="btn primary" href="https://github.com/kbwook/CSEETV/raw/main/CSEETV.apk">📦 CSEETV.apk 바로 다운로드</a>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- 1. Download & Install -->
+    <section class="card">
+      <h2>1. 앱 다운로드 및 설치 방법</h2>
+      <ol>
+        <li>CCTV 카메라로 사용할 안드로이드 스마트폰에서 상단 <strong>[📦 CSEETV.apk 바로 다운로드]</strong> 버튼을 눌러 APK 파일을 다운로드합니다.</li>
+        <li>다운로드가 완료되면 알림창 또는 <strong>내 파일(Download 폴더)</strong>에서 <code>CSEETV.apk</code>를 눌러 설치를 진행합니다.</li>
+        <li>최초 설치 시 <em>"보안을 위해 이 출처의 알 수 없는 앱을 설치할 수 없습니다"</em> 안내가 표시되면 <strong>[설정] → [이 출처 허용]</strong>을 켠 뒤 설치를 완료합니다.</li>
+        <li>앱을 실행하고 <strong>[CSEETV 웹서버 시작하기]</strong>를 누른 뒤, <strong>카메라 권한</strong>과 <strong>알림 권한</strong>을 모두 허용합니다.</li>
+      </ol>
+      <div class="tip-box">
+        💡 <strong>설치 팁</strong>: 시청할 PC나 다른 스마트폰에는 별도의 앱을 설치할 필요가 없습니다. 크롬(Chrome), 사파리(Safari), 엣지(Edge) 등 기본 웹 브라우저만 있으면 바로 접속할 수 있습니다.
+      </div>
+    </section>
+
+    <!-- 2. How to Connect -->
+    <section class="card">
+      <h2>2. CCTV 화면 접속 방법 (내부 Wi-Fi &amp; 외부 원격 접속)</h2>
+      <p>앱에서 <strong>[CSEETV 웹서버 시작하기]</strong> 버튼을 누르면 상단 카드에 현재 접속 가능한 주소와 QR 코드가 표시됩니다.</p>
+
+      <h3>방법 A. QR 코드 스캔으로 즉시 접속 (가장 간편)</h3>
+      <ul>
+        <li>CCTV 스마트폰 화면 중앙에 표시된 <strong>QR 코드</strong>를 시청할 스마트폰이나 태블릿의 기본 카메라 앱으로 비추면 접속 링크가 나타나며, 터치 즉시 CCTV 웹 콘솔이 열립니다.</li>
+      </ul>
+
+      <h3>방법 B. 집/사무실 내부 (같은 Wi-Fi 공유기)에서 접속</h3>
+      <ul>
+        <li>동일한 Wi-Fi에 연결된 PC나 스마트폰 브라우저 주소창에 앱 상단의 첫 번째 파란색 주소(예: <code>http://192.168.0.15:8080</code>)를 입력합니다.</li>
+      </ul>
+
+      <h3>방법 C. 집 밖 외부(LTE / 5G / 타 지역)에서 접속</h3>
+      <ul>
+        <li><strong>1순위 (UPnP 다이렉트 직결)</strong>: 공유기가 UPnP를 지원하는 경우 앱 화면에 초록색 <code>다이렉트(UPnP): http://공인IP:포트</code> 주소가 자동으로 생성됩니다. 이 주소로 접속하면 1:1로 가장 빠르게 연결됩니다.</li>
+        <li><strong>2순위 (Hybrid Gateway 접속)</strong>: UPnP 동작에 문제가 있는 공유기 환경을 위해 기본 제공되는 <code>Hybrid Gateway</code> 주소(예: <code>http://kbwook.familyds.com:9080/cam/cam-xxxx/</code>)로 접속하면, 공유기 환경에 맞춰 1:1 직결 또는 게이트웨이 터널로 자동 연결됩니다.</li>
+        <li><strong>여러 대의 카메라 사용 시</strong>: 각 스마트폰마다 고유한 카메라 ID(예: <code>cam-a3f1</code>)가 자동 생성되며, 만약 여러 기기에 같은 이름을 입력하더라도 자동으로 <code>-2</code>, <code>-3</code> 번호가 부여되어 충돌 없이 모두 사용할 수 있습니다.</li>
+      </ul>
+    </section>
+
+    <!-- 3. Security Settings -->
+    <section class="card">
+      <h2>3. 비밀번호(접속 PIN) 및 보안 설정</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>설정 항목</th>
+            <th>역할 및 사용 방법</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>접속 PIN</strong><br><span style="color:var(--muted); font-size:0.82rem;">(포트 및 접속 보안 설정 카드)</span></td>
+            <td>
+              내 카메라 영상을 다른 사람이 볼 수 없도록 잠그는 <strong>시청자용 비밀번호</strong>입니다.<br>
+              PIN을 입력해 두면 웹 브라우저로 접속했을 때 해당 PIN 번호를 입력해야만 영상 시청 및 원격 제어가 가능합니다.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>고유 카메라 ID</strong><br><span style="color:var(--muted); font-size:0.82rem;">(하이브리드 외부 접속 카드)</span></td>
+            <td>
+              외부에서 내 카메라를 구분하는 고유 이름입니다 (예: <code>cam-a3f1</code>, <code>livingroom</code> 등).<br>
+              앱 최초 설치 시 기기마다 겹치지 않는 고유 ID가 자동 설정됩니다.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>터널 보안키 (선택)</strong><br><span style="color:var(--muted); font-size:0.82rem;">(하이브리드 외부 접속 카드)</span></td>
+            <td>
+              개인 전용 Hybrid Gateway 서버를 별도로 구축해 사용할 때 허가된 스마트폰만 등록되도록 제한하는 서버 등록 키입니다. <strong>일반 사용 시에는 비워두시면 됩니다.</strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 4. Web Console Features -->
+    <section class="card">
+      <h2>4. 주요 기능 사용 방법 (스마트폰 앱 &amp; 웹 브라우저 콘솔)</h2>
+
+      <h3>① 원격 CCTV 동작 시작 / 일시 중지 (Start / Stop)</h3>
+      <ul>
+        <li>외출 중에만 카메라를 켜고 집에 있을 때는 카메라를 꺼두고 싶다면, 웹 브라우저 콘솔 상단의 <strong>[⏹️ CCTV 동작 중지 (Stop)]</strong> 버튼을 누릅니다.</li>
+        <li>중지 상태(Standby)에서는 카메라 센서·스트리밍·녹화가 모두 꺼져 배터리와 발열을 절약하며, 언제든 웹 브라우저에서 <strong>[▶️ CCTV 시작 (Start)]</strong>을 눌러 다시 켤 수 있습니다.</li>
+      </ul>
+
+      <h3>② 동영상 자동 분할 저장 및 순환 녹화 (블랙박스 모드)</h3>
+      <ul>
+        <li><strong>[자동 동영상 저장 (순환 녹화)]</strong> 스위치를 켜면 실시간 스트리밍과 동시에 스마트폰 내부에 고화질 <code>.mp4</code> 동영상을 자동 녹화합니다.</li>
+        <li><strong>저장 시간 단위</strong>: 파일 1개당 길이를 <code>1분 / 3분 / 5분 / 10분 / 15분 / 30분 / 60분</code> 중에서 선택할 수 있습니다.</li>
+        <li><strong>최대 저장 용량 한도</strong>: <code>500MB / 1GB / 2GB / 5GB / 10GB / 20GB</code> 중 원하는 용량을 지정하면, 한도에 도달했을 때 <strong>가장 오래된 녹화 파일부터 자동으로 삭제</strong>하며 끊김 없이 새 영상을 계속 저장합니다.</li>
+        <li>저장된 영상은 웹 브라우저의 <strong>[📼 저장된 동영상 목록]</strong>에서 즉시 재생(구간 이동 지원)하거나 PC/스마트폰으로 다운로드할 수 있습니다.</li>
+      </ul>
+
+      <h3>③ 원격 카메라 제어 및 실시간 동작 감지 (Motion Detection)</h3>
+      <ul>
+        <li>웹 브라우저에서 <strong>전/후면 렌즈 전환</strong>, <strong>플래시(조명) 켜기/끄기</strong>, <strong>90° 화면 회전</strong>, <strong>좌우 반전</strong>, <strong>해상도(480p / 720p / 1080p)</strong> 및 <strong>디지털 줌(1.0x ~ 5.0x)</strong>을 실시간으로 조작할 수 있습니다.</li>
+        <li><strong>실시간 동작 감지</strong>를 켜두면 화면 내 움직임이 포착될 때마다 경고 배지가 켜지고 감지 순간의 스냅샷 사진이 자동으로 기록됩니다.</li>
+      </ul>
+
+      <h3>④ 24시간 장시간 설치를 위한 OLED 블랙 스크린 절전 모드</h3>
+      <ul>
+        <li>CCTV 스마트폰 화면을 계속 켜두어 발생하는 발열과 번인을 막으려면 앱 또는 웹 콘솔에서 <strong>[📱 블랙 스크린 모드]</strong>를 켭니다.</li>
+        <li>스마트폰 화면이 완전히 검은색(밝기 1%)으로 전환되며, 스마트폰 화면을 <strong>빠르게 두 번 탭(Double Tap)</strong>하면 원래 설정 화면으로 돌아옵니다.</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <footer>
+    <div><strong>CSEETV</strong> · Powered by <strong>KH2C</strong></div>
+    <div style="margin-top:4px;">Created by <strong>Brian Kim</strong> (<a href="mailto:dev.kh2c@gmail.com" style="color:#60a5fa;">dev.kh2c@gmail.com</a>) · <a href="privacy.html" style="color:#60a5fa;">개인정보처리방침 (Privacy Policy)</a></div>
+  </footer>
+
+</body>
+</html>

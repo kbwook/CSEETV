@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSEETV 개인정보처리방침 (Privacy Policy) | Powered by KH2C</title>
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --panel: #151c28;
+      --border: #253045;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #3b82f6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+      line-height: 1.75;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+    }
+    h1 { font-size: 1.85rem; margin-bottom: 8px; }
+    h2 { font-size: 1.25rem; color: #93c5fd; margin: 18px 0 8px; }
+    p, li { color: #cbd5e1; font-size: 0.95rem; }
+    ul { padding-left: 20px; display: flex; flex-direction: column; gap: 6px; margin-top: 6px; }
+    a { color: #60a5fa; text-decoration: none; }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      padding: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>🔒 CSEETV 개인정보처리방침 (Privacy Policy)</h1>
+      <p style="color:var(--muted); font-size:0.88rem;">시행일자: 2026년 11월 9일 · 제공: KH2C (Created by Brian Kim)</p>
+
+      <h2>1. 개인정보 및 카메라 데이터의 처리 목적</h2>
+      <p>
+        <strong>CSEETV</strong>(이하 "앱")는 사용자의 안드로이드 기기 자체를 로컬 웹서버 및 개인용 CCTV/블랙박스로 동작시키는 유틸리티 애플리케이션입니다.
+        개발사(<strong>KH2C</strong>)는 사용자의 개인정보, 카메라 영상, 스냅샷 사진, 또는 녹화된 동영상 파일을 별도의 수집 서버로 전송하거나 수집·보관하지 않습니다.
+      </p>
+
+      <h2>2. 기기 권한 사용 안내 (Required Permissions)</h2>
+      <ul>
+        <li><strong>카메라 권한 (<code>android.permission.CAMERA</code>)</strong>: 실시간 MJPEG 스트리밍, 동작 감지 스냅샷 생성 및 기기 내부 저장소 MP4 순환 녹화 기능을 수행하기 위해서만 사용됩니다.</li>
+        <li><strong>알림 및 포그라운드 서비스 권한 (<code>POST_NOTIFICATIONS</code>, <code>FOREGROUND_SERVICE_CAMERA</code>)</strong>: 화면이 꺼지거나 절전 상태일 때도 CCTV 웹서버가 중단되지 않고 작동 중임을 상태표시줄에 알리기 위해 사용됩니다.</li>
+        <li><strong>네트워크 권한 (<code>INTERNET</code>, <code>ACCESS_WIFI_STATE</code>)</strong>: 사용자의 웹 브라우저에서 기기 내장 웹서버로 접속하거나, 사용자가 활성화한 UPnP / Hybrid Gateway 연결을 수행하기 위해 사용됩니다.</li>
+      </ul>
+
+      <h2>3. 영상 데이터의 저장 및 관리</h2>
+      <ul>
+        <li>녹화되는 모든 동영상(MP4)과 동작 감지 스냅샷은 오직 <strong>사용자의 스마트폰 앱 전용 내부 저장소</strong>에만 저장됩니다.</li>
+        <li>사용자가 설정한 최대 저장 용량 한도 초과 시 가장 오래된 파일부터 기기 내에서 자동 삭제되며, 앱을 삭제하거나 [전체 삭제]를 실행하면 즉시 영구 삭제됩니다.</li>
+      </ul>
+
+      <h2>4. 오픈소스 소프트웨어 고지 (Open Source Attribution)</h2>
+      <p>본 앱은 아래 오픈소스 라이브러리를 사용하며 각 라이선스 조건을 준수합니다:</p>
+      <ul>
+        <li>AndroidX, Jetpack Compose, CameraX, Kotlin Coroutines — <em>Apache License 2.0</em></li>
+        <li>OkHttp (Square, Inc.) — <em>Apache License 2.0</em></li>
+        <li>ZXing Core (ZXing Authors) — <em>Apache License 2.0</em></li>
+        <li>NanoHTTPD — <em>BSD 3-Clause License</em></li>
+      </ul>
+
+      <h2>5. 개인정보 보호책임자 및 문의처</h2>
+      <ul>
+        <li><strong>제공</strong>: KH2C</li>
+        <li><strong>담당자 (Creator)</strong>: Brian Kim</li>
+        <li><strong>이메일</strong>: <a href="mailto:dev.kh2c@gmail.com">dev.kh2c@gmail.com</a></li>
+      </ul>
+
+      <p style="margin-top:24px;"><a href="index.html">← CSEETV 사용자 가이드로 돌아가기</a></p>
+    </div>
+  </div>
+  <footer>
+    <strong>CSEETV</strong> · Powered by <strong>KH2C</strong> · Created by <strong>Brian Kim</strong>
+  </footer>
+</body>
+</html>
